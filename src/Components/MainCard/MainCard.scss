@@ -1,0 +1,57 @@
+@import "../Common/GlobalStyling.scss";
+
+.overviewBG {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+  width: 100vw;
+  height: 58vh;
+  background-color: black;
+
+  animation: bgAnimation 1s ease-in-out;
+
+  @keyframes bgAnimation {
+    from {
+      height: 100vh;
+    }
+    to {
+      height: 58vh;
+    }
+  }
+}
+
+.mainCardWrapper {
+  padding: 0px 16px 16px 16px;
+  width: auto;
+}
+
+.mainCard {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  margin-top: 8px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  text-align: center;
+  align-items: stretch;
+  justify-content: center;
+
+  box-shadow: $card-shadow;
+
+  @extend %on-load-animation;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 16px 16px 16px 16px;
+}
+
+.ticketEdge {
+  width: stretch;
+  position: absolute;
+  top: 0;
+  margin: 0px;
+  margin-top: -20px;
+}

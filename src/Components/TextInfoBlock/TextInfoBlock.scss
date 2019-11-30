@@ -1,0 +1,13 @@
+@import "../Common/GlobalStyling.scss";
+
+.textInfoWrapper {
+  padding: 24px 16px 24px 16px;
+  @extend %section-border;
+}
+
+.textInfoWrapper p {
+  margin: 0px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+}

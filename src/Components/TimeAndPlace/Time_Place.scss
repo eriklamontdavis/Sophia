@@ -1,0 +1,68 @@
+@import "../Common/GlobalStyling.scss";
+
+.infoCardsContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  padding: 16px 8px 16px 8px;
+
+  @extend %section-border;
+}
+
+%info-card-wrapper {
+  padding: 8px;
+  width: 40%;
+  flex-grow: 1;
+}
+
+%info-card {
+  border-radius: 8px;
+  padding: 24px 8px 24px 24px;
+  position: relative;
+
+  h6 {
+    margin: 0px 0 8px 0;
+    font-weight: 400;
+    opacity: 0.84;
+    font-size: 16px;
+    text-align: left;
+  }
+
+  p {
+    margin: 0;
+    font-size: 19px;
+    font-weight: 700;
+    text-justify: left;
+  }
+}
+
+.whenInfoCard {
+  @extend %info-card;
+  background-color: white;
+}
+
+.whereInfoCard {
+  @extend %info-card;
+  background-color: rgba(0, 0, 0, 0.03);
+  cursor: pointer;
+  color: black;
+}
+
+.otherInfoCard {
+  @extend %info-card;
+  background-color: transparent;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.05);
+}
+
+.infoCardWrapper {
+  @extend %info-card-wrapper;
+
+  img {
+    position: absolute;
+    width: 30px;
+    bottom: 30px;
+    right: 20px;
+  }
+}

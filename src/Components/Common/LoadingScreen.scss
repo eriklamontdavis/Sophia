@@ -1,0 +1,47 @@
+@import "GlobalStyling.scss";
+
+.splash-screen {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+
+  background-color: black;
+  overflow: hidden;
+
+  .loadingDiv {
+    width: 100%;
+    margin: auto;
+    margin-bottom: 45vh;
+  }
+
+  h2 {
+    margin-top: 0px;
+    margin-bottom: 12px;
+    font-size: 28px;
+  }
+
+  p {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 124%;
+    margin: auto;
+    margin-top: 0;
+  }
+
+  .loadingAnimation {
+    width: 220px;
+  }
+
+  .loadingCard {
+    position: fixed;
+    bottom: 0;
+    top: auto;
+    width: 100%;
+  }
+}

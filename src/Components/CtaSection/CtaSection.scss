@@ -1,0 +1,21 @@
+@import "../Common/GlobalStyling.scss";
+
+.ctaSectionWrapper {
+  align-items: center;
+  align-content: center;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 30px 16px 30px 16px;
+  margin: 0px 0px 0px 0px;
+
+  @extend %section-border;
+}
+
+.orPara {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}

@@ -1,0 +1,29 @@
+import React from "react";
+import WouldYouGoModal from "./WouldYouGo.js";
+import "./WouldYouGo.scss";
+import "./Buttons.scss";
+
+class WouldGoButton extends React.Component {
+  state = { show: false };
+
+  showModal = () => {
+    this.setState({ show: true });
+  };
+
+  hideModal = () => {
+    this.setState({ show: false });
+  };
+
+  render() {
+    return (
+      <main>
+        <WouldYouGoModal show={this.state.show} handleClose={this.hideModal} />
+        <button className="primaryButton" onClick={this.showModal}>
+          I would go
+        </button>
+      </main>
+    );
+  }
+}
+
+export default WouldGoButton;

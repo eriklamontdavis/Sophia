@@ -1,0 +1,55 @@
+@import "../Common/GlobalStyling.scss";
+
+.guestOverviewContainer {
+  width: auto;
+  display: flex;
+  padding-right: 6px;
+  padding-left: 6px;
+  flex-grow: 1;
+  flex-direction: row;
+}
+
+%guest-count {
+  width: auto;
+  flex-grow: 1;
+  padding: 20px 8px 20px 8px;
+  margin: 10px;
+  border-radius: $standard-radius;
+
+  p {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 4px;
+    margin-top: 0px;
+  }
+
+  h4 {
+    font-weight: $bold-text;
+    font-size: 28px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+}
+
+.wouldGoCount {
+  @extend %guest-count;
+
+  border-style: solid;
+  border-width: $border-width;
+  border-color: $grey;
+}
+
+.requiredCount {
+  @extend %guest-count;
+
+  border-style: solid;
+  border-width: $border-width;
+  border-color: $secondary-color;
+}
+
+.spotsLeft {
+  @extend %guest-count;
+
+  color: white;
+  background-color: #241209;
+}

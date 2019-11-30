@@ -1,0 +1,50 @@
+@import "../Common/GlobalStyling.scss";
+
+.timerCountdown {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-shadow: $card-shadow;
+
+  color: black;
+  background-color: white;
+
+  border: 3px solid rgba(251, 11, 75, 0.12);
+
+  border-radius: 8px;
+  margin-top: 4px;
+  padding: 16px 16px 16px 16px;
+
+  width: auto;
+
+  @extend %on-load-animation;
+  animation: onLoad 1.2s ease-in-out;
+
+  img {
+    float: left;
+    margin-right: 10px;
+    width: 24px;
+  }
+}
+
+.timerTitle {
+  margin: 0px;
+  float: left;
+  max-width: 170px;
+  line-height: 110%;
+
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.timerTime {
+  color: $secondary-color;
+
+  margin: 0px;
+  font-size: 17px;
+  text-align: right;
+  flex-grow: 1;
+  flex-shrink: 0;
+
+  font-weight: 700;
+}

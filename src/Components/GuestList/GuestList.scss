@@ -1,0 +1,27 @@
+@import "../Common/GlobalStyling.scss";
+
+.personCardRow {
+  display: flex;
+  flex-direction: row;
+  padding: 8px 4px 16px 1em;
+  overflow-y: scroll; /* has to be scroll, not auto */
+  -webkit-overflow-scrolling: touch;
+}
+
+.GuestListContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 24px 0px 8px 0px;
+  align-items: stretch;
+
+  @extend %on-load-animation;
+  animation: onLoad 1.4s ease-in-out;
+
+  h6 {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 4px;
+    margin-left: 1em;
+    margin-top: 0px;
+  }
+}

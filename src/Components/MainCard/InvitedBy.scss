@@ -1,0 +1,21 @@
+.invitedBy {
+  position: relative;
+  background-color: #fcfbf8;
+  padding: 0px 0px 28px 0px;
+  border-radius: 6px;
+}
+
+.invitedBy {
+  img {
+    position: absolute;
+    z-index: 90;
+    top: -20px;
+    left: 0px;
+    width: 100%;
+  }
+  p {
+    width: 100%;
+    position: absolute;
+    z-index: 100;
+  }
+}

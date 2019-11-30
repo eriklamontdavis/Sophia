@@ -1,0 +1,37 @@
+$primary-color: rgb(14, 14, 14);
+$secondary-color: #fb0b4b;
+$bg-color: black;
+$card-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04);
+$standard-radius: 8px;
+$standard-padding: 16px;
+$border-width: 2px;
+$grey: rgba(0, 0, 0, 0.05);
+$bold-text: 700;
+
+%section-border {
+  border-top-style: solid;
+  border-top-color: $grey;
+  border-width: $border-width;
+}
+
+%on-load-animation {
+  animation: onLoad 1.2s ease-in-out;
+
+  @keyframes onLoad {
+    from {
+      margin-top: 68vh;
+    }
+    to {
+      margin-top: 0px;
+    }
+  }
+}
+
+.container {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+button:link {
+  text-decoration: none;
+}

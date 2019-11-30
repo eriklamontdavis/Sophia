@@ -1,0 +1,52 @@
+@import "./GlobalStyling.scss";
+
+%standard-button {
+  width: 100%;
+  height: 62px;
+  font-size: 22px;
+  font-weight: 700;
+  border: none;
+  border-radius: 64px;
+  text-decoration-line: none;
+}
+
+.primaryButton {
+  @extend %standard-button;
+  background-color: $primary-color;
+  color: white;
+  // box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+.secondaryButton {
+  @extend %standard-button;
+  background-color: transparent;
+  border-style: solid;
+  color: black;
+}
+
+.secondaryButtonAlt {
+  @extend %standard-button;
+  background-color: transparent;
+  color: white;
+  border-style: solid;
+  border-color: white;
+}
+
+.modalButton {
+  @extend %standard-button;
+  color: black;
+  background-color: white;
+}
+
+.smallButton {
+  background-color: $grey;
+  text-decoration: none;
+  font-size: 16px;
+  height: 48px;
+  font-weight: 700;
+  color: black;
+
+  padding: 10px 16px 10px 16px;
+  border: none;
+  border-radius: 50px;
+}

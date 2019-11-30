@@ -1,0 +1,33 @@
+@import "../Common/GlobalStyling.scss";
+
+label {
+}
+
+input[type="text"] {
+  /* Remove First */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  /* Then Style */
+
+  width: stretch;
+  box-shadow: $card-shadow;
+  border: 3px solid $grey;
+  border-radius: 6px;
+  padding: 20px 16px 20px 16px;
+
+  font-size: 20px;
+  line-height: 20px;
+  text-align: center;
+  background: white;
+  outline: none;
+  margin-bottom: 38px;
+}
+
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: black;
+  font-weight: 600;
+  opacity: 0.34;
+}

@@ -1,0 +1,13 @@
+:root {
+  --primary-color: #fb0b4b;
+  --card-box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.05);
+  --line-color: rgba(0, 0, 0, 0.05);
+  --border-width: 1px;
+  --standard-padding: 16px;
+  --standard-radius: 8px;
+}
+
+.container {
+  padding-left: 16px;
+  padding-right: 16px;
+}

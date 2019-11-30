@@ -1,0 +1,39 @@
+@import "../Common/GlobalStyling.scss";
+
+.navContainer {
+  display: flex;
+  flex-direction: row;
+  padding: 16px 16px 12px 16px;
+  flex-grow: 1;
+  font-weight: $bold-text;
+  align-items: center;
+
+  color: white;
+}
+
+.signIn {
+  display: flex;
+  height: 42px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 2px;
+  margin-left: auto;
+  align-items: center;
+
+  border-radius: 50px;
+  background-color: rgba(255, 255, 255, 0.15);
+
+  p {
+    
+    font-size: 18px;
+  }
+
+}
+
+.logo {
+  border-radius: 50px;
+  margin-right: auto;
+  height: 32px;
+  width: 32px;
+  background-color: white;
+}

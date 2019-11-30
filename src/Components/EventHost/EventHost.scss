@@ -1,0 +1,49 @@
+@import "../Common/GlobalStyling.scss";
+
+.hostDivWrapper {
+  padding: $standard-padding;
+  @extend %section-border;
+}
+
+.hostDiv {
+  display: flex;
+  flex-direction: row;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  align-items: center;
+
+  img {
+    background-color: $grey;
+    border-radius: 100px;
+    border-style: solid;
+    border-color: $grey;
+    width: 38px;
+    height: 38px;
+  }
+}
+
+.hostDiv .hostNameDiv {
+  margin-left: 16px;
+  flex-grow: 1;
+}
+
+.hostNameDiv h6 {
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+
+.hostNameDiv p {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.contactButtonWrapper {
+  float: right;
+}
+
+button:link {
+  text-decoration: none;
+}
