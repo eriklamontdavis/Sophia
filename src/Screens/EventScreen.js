@@ -18,31 +18,7 @@ class EventScreen extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: {
-        title: null,
-        location: "Såå 364",
-        timestamp: "",
-        max: 50,
-        min: 40,
-        participants: 15,
-        when: "5/4 19:30",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim eniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat."
-      },
-      guests: [
-        {
-          name: "Jesper Munkeby",
-          image: "https://i.imgur.com/pggdUym.jpg",
-          id: 1,
-          payed: false
-        },
-        {
-          name: "Jesper Muneby",
-          image: "https://i.imgur.com/pggdUym.jpg",
-          id: 1,
-          payed: false
-        }
-      ]
+      title: "hej"
     };
   }
 
@@ -50,9 +26,9 @@ class EventScreen extends React.Component {
     const rootRef = firebase
       .database()
       .ref()
-      .child("events");
-    const eventsRef = rootRef.child("data");
-    eventsRef.on("value", snap => {
+      .child("event");
+    const titleRef = rootRef.child("title");
+    titleRef.on("value", snap => {
       this.setState({
         title: snap.val()
       });
@@ -64,16 +40,7 @@ class EventScreen extends React.Component {
       <Provider value={this.state.guests}>
         <React.Fragment>
           <div>
-            <TopNav />
-            <MainCard data={this.state.data} />
-            <div className="overviewBG" />
-            <TimerCountdown />
-            <GuestList />
-            <TextInfoBlock data={this.state.data} />
-            <TimeAndPlace data={this.state.data} />
-            <EventHost />
-            <CtaSection />
-            <Footer />
+            <h2>{this.state.title}</h2>
           </div>
         </React.Fragment>
       </Provider>
