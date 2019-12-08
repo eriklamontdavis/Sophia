@@ -8,35 +8,26 @@ import GuestCountOverview from "./GuestCountOverview.js";
 import ProgressBar from "./ProgressBar";
 import OptedInHeader from "./OptedInHeader";
 
-class MainCard extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+import { Consumer } from "../Context";
 
+class MainCard extends React.Component {
   render() {
     return (
-      <div className="mainCardWrapper">
-        <OptedInHeader
-          required={this.props.data.min - this.props.data.participants}
-        />
-
-        <div className="mainCard">
-          <MainCardHeader title={this.props.data.title} />
-          <GuestCountOverview
-            min={this.props.data.min}
-            participants={this.props.data.participants}
-            max={this.props.data.max}
-          />
-          <ProgressBar
-            percentage={
-              (this.props.data.participants / this.props.data.min) * 100
-            }
-          />
-          <div className="buttonContainer">
-            <WouldGoButton text="I would go" />
+      <Consumer>
+        {({ data }) => (
+          <div className="mainCardWrapper">
+            <OptedInHeader />
+            <div className="mainCard">
+              <MainCardHeader />
+              <GuestCountOverview />
+              <ProgressBar percentage={(data.participants / data.min) * 100} />
+              <div className="buttonContainer">
+                <WouldGoButton text="I would go" />
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
+        )}
+      </Consumer>
     );
   }
 }

@@ -1,41 +1,33 @@
 @import "../Common/GlobalStyling.scss";
 
 .personAvatarImage {
-  height: 48px;
-  width: 48px;
-  margin-bottom: 10px;
+  height: 28px;
+  width: 28px;
+  margin-right: 0.5em;
+
   border-radius: 100px;
   border-style: solid;
-  border-width: 5px;
+  border-width: 2px;
   border-color: $grey;
 }
 
 .personCardDiv {
   background-color: white;
   border-radius: 6px;
-  padding: 20px 24px 16px 24px;
-  margin-right: 14px;
+  padding: 1em;
+  margin-bottom: 0.7em;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: l;
   align-items: center;
-  text-align: center;
+
   flex-grow: 1;
   overflow: hidden;
 
-  box-shadow: $card-shadow;
-
   p {
     margin: 0;
-    font-size: 17px;
+    font-size: 18px;
     font-weight: 600;
     line-height: 112%;
-
-    /*
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    */
   }
 }

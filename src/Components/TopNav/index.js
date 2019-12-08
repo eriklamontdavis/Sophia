@@ -5,10 +5,11 @@ import RightArrow from "../../Images/RightArrow.svg";
 const TopNav = props => (
   <div className="navContainer">
     <a className="logo" />
+    {/*
     <a className="signIn">
       <p>Sign in</p>
-     
     </a>
+    */}
   </div>
 );
 

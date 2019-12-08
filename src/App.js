@@ -16,7 +16,7 @@ export default class App extends React.Component {
       <div>
         <Router>
           <Route exact path="/" component={HomeScreen} />
-          <Route path="/event/" component={EventScreen} />
+          <Route path="/event/:eventId" component={EventScreen} />
           <Route path="/signin" component={SignIn} />
           <Route path="/user-profile" component={UserSignUp} />
         </Router>

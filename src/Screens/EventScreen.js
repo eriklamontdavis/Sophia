@@ -10,40 +10,21 @@ import EventHost from "../Components/EventHost";
 import TopNav from "../Components/TopNav";
 import Footer from "../Components/Footer";
 import TimerCountdown from "../Components/TimerCoutdown";
-import * as firebase from "firebase";
-
-import { Provider } from "../Components/Context";
 
 class EventScreen extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      title: "hej"
-    };
-  }
-
-  componentDidMount() {
-    const rootRef = firebase
-      .database()
-      .ref()
-      .child("event");
-    const titleRef = rootRef.child("title");
-    titleRef.on("value", snap => {
-      this.setState({
-        title: snap.val()
-      });
-    });
-  }
-
   render() {
     return (
-      <Provider value={this.state.guests}>
-        <React.Fragment>
-          <div>
-            <h2>{this.state.title}</h2>
-          </div>
-        </React.Fragment>
-      </Provider>
+      <React.Fragment>
+        <TopNav />
+        <MainCard />
+        <div className="overviewBG" />
+        <TimerCountdown />
+        <TextInfoBlock />
+        <GuestList />
+
+        <EventHost />
+        <CtaSection />
+      </React.Fragment>
     );
   }
 }

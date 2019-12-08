@@ -2,6 +2,8 @@ import React from "react";
 import "./OptedInHeader.scss";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 
+import { Consumer } from "../Context";
+
 class OptedInHeader extends React.Component {
   state = {
     value: window.location.href,
@@ -10,19 +12,25 @@ class OptedInHeader extends React.Component {
 
   render() {
     return (
-      <div>
-        <div className="optInHeaderDiv">
-          <h1>{this.props.required}</h1>
-          <h2>More people needed</h2>
-          <p>Share the link below with the people you want to bring.</p>
-          <CopyToClipboard onCopy={this.onCopy} text={this.state.value}>
-            <button className="copyLink">
-              <i className="ticketIcon" />
-              Copy invite link
-            </button>
-          </CopyToClipboard>
-        </div>
-      </div>
+      <Consumer>
+        {({ data }) => (
+          <div>
+            <div className="optInHeaderDiv">
+              <h1>{data.min}</h1>
+              <p>
+                more people needed in <span>{data.deadline}</span> for this
+                gathering to happen.
+              </p>
+              <CopyToClipboard onCopy={this.onCopy} text={this.state.value}>
+                <button className="copyLink">
+                  <i className="ticketIcon" />
+                  Copy invite link
+                </button>
+              </CopyToClipboard>
+            </div>
+          </div>
+        )}
+      </Consumer>
     );
   }
 }

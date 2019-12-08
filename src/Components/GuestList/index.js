@@ -1,18 +1,19 @@
 import React from "react";
 import Guest from "./Guest";
+import propTypes from "prop-types";
 import "./GuestList.scss";
 
 import { Consumer } from "../Context";
 
-const GuestList = () => {
+const GuestList = props => {
   return (
     <Consumer>
-      {context => (
+      {({ data }) => (
         <React.Fragment>
           <div className="GuestListContainer">
             <h6>Would go:</h6>
             <div className="personCardRow">
-              {context.map(guest => (
+              {data.guests.map(guest => (
                 <Guest {...guest} key={guest.id.toString()} />
               ))}
             </div>
