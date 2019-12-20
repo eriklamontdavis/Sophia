@@ -1,4 +1,4 @@
-@import "../Common/GlobalStyling.scss";
+@import "../../Common/GlobalStyling.scss";
 
 .progressBarWrapper {
   padding: 16px 16px 24px 16px;
@@ -26,7 +26,7 @@
 .goalIndicator {
   position: relative;
 
-  background-color: $secondary-color;
+  background-color: #ff8243;
   margin-left: 12px;
   height: 20px;
   width: 20px;

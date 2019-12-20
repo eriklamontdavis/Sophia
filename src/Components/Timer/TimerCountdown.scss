@@ -4,18 +4,15 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  box-shadow: $card-shadow;
 
   color: black;
-  background-color: white;
-
+  background-color: transparent;
   border: 3px solid rgba(251, 11, 75, 0.12);
 
   border-radius: 8px;
-  margin-top: 4px;
   padding: 16px 16px 16px 16px;
-
   width: auto;
+  margin: 0em 0em 2em;
 
   @extend %on-load-animation;
   animation: onLoad 1.2s ease-in-out;

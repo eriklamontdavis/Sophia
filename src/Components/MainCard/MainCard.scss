@@ -2,6 +2,7 @@
 
 .overviewBG {
   position: absolute;
+
   top: 0px;
   left: 0px;
   z-index: -1;
@@ -30,16 +31,14 @@
   display: flex;
   position: relative;
   flex-direction: column;
-  margin-top: 8px;
-  border-radius: 8px;
+  margin-top: -110px;
+  border-radius: 10px;
   background-color: #ffffff;
   text-align: center;
   align-items: stretch;
   justify-content: center;
 
   box-shadow: $card-shadow;
-
-  @extend %on-load-animation;
 }
 
 .buttonContainer {

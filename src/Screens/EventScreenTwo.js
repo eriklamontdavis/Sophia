@@ -9,23 +9,21 @@ import EventHost from "../Components/EventHost";
 import Timer from "../Components/Timer";
 import Header from "../Components/Header";
 import Details from "../Components/Details";
-import withSplashScreen from "../Components/Common/withSplashScreen";
 
-class EventScreen extends React.Component {
+class Ya extends React.Component {
   render() {
     return (
       <React.Fragment>
         <Header />
-        <MainCard />
         <TextInfoBlock />
         <GuestList />
-        <Details />
         <Timer />
-        <CtaSection />
+        <Details />
         <EventHost />
+        <CtaSection />
       </React.Fragment>
     );
   }
 }
 
-export default withSplashScreen(EventScreen);
+export default Ya;

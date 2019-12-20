@@ -31,7 +31,7 @@ function withSplashScreen(WrappedComponent) {
           this.setState({
             loading: false
           });
-        }, 15);
+        }, 1500);
       } catch (err) {
         console.log(err);
         this.setState({

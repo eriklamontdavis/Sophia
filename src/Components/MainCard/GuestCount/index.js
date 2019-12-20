@@ -1,23 +1,23 @@
 import React, { Component } from "react";
 
 import CountUp from "react-countup";
-import global from "../Common/GlobalStyling.js";
-import Going from "../../Images/Going.svg";
+import global from "../../Common/GlobalStyling.js";
+import Going from "../../../Images/Going.svg";
 
-import { Consumer } from "../Context";
+import { Consumer } from "../../Context";
 
 class GuestCountOverview extends Component {
   render() {
-    const { min, participants } = this.props;
+    const { participants } = this.props;
     return (
       <Consumer>
         {({ data }) => (
           <React.Fragment>
             <div className="guestOverviewContainer">
               <div className="going">
-                <div className="left">
+                <div className="going-header">
                   <img src={Going} alt="clock icon"></img>
-                  <p>Would go</p>
+                  <p>Would go:</p>
                 </div>
                 <h4>
                   <CountUp
@@ -51,7 +51,7 @@ class GuestCountOverview extends Component {
               }
               .going {
                 width: auto;
-                padding: 1em 1em;
+                padding: 0.7em 1em;
                 border-radius: ${global.radius};
                 display: flex;
                 flex-direction: row;
@@ -78,7 +78,7 @@ class GuestCountOverview extends Component {
                 width: 24px;
                 margin-right: 0.8em;
               }
-              .left {
+              .going-header {
                 display: flex;
                 flex-direction: row;
               }

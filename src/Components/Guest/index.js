@@ -1,6 +1,6 @@
 import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
-import "./PersonCard.scss";
+import "./Guest.scss";
 
 import { Consumer } from "../Context";
 
@@ -12,7 +12,7 @@ class Guest extends PureComponent {
       <div className="personCardWrapper">
         <Consumer>
           {({ players }) => (
-            <div className="personCardDiv">
+            <div className="guest">
               <div className="userAvatarWrapper">
                 <img src={image} className="personAvatarImage" />
               </div>

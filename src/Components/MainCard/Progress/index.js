@@ -1,9 +1,7 @@
 import React from "react";
 import "./ProgressBar.scss";
-import CheckmarkIcon from "../../Images/Checkmark.svg";
+import CheckmarkIcon from "../../../Images/Checkmark.svg";
 import styled, { keyframes } from "styled-components";
-
-import { Consumer } from "../Context";
 
 const WidthAnimation = props => keyframes`
   0% {

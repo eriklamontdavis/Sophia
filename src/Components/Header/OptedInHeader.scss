@@ -1,16 +1,17 @@
 @import "../Common/GlobalStyling.scss";
 @import "../Common/Buttons.scss";
 
-.optInHeaderDiv {
-  padding: 0px 16px 16px 16px;
+.header {
+  padding: 2.5em 1em 6.5em;
   text-align: center;
   color: white;
-  max-width: 264px;
+  background-color: black;
+
   margin: auto;
   margin-bottom: 24px;
 
   h1 {
-    font-size: 62px;
+    font-size: 58px;
     text-align: center;
     margin: 0px;
     margin-top: 0px;
@@ -24,7 +25,7 @@
   }
   p {
     font-weight: 300;
-    font-size: 1.2em;
+    font-size: 1.25em;
     line-height: 19px;
     margin: 0px;
     margin-bottom: 24px;
@@ -36,11 +37,14 @@
   }
   button {
     @extend %standard-button;
+    width: 220px;
     position: relative;
-    color: black;
-    background-color: white;
-    height: 58px;
-    font-size: 19px;
+    color: white;
+    background-color: transparent;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 1);
+    height: 54px;
+    font-size: 18px;
   }
 }
 
