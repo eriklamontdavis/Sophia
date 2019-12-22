@@ -4,7 +4,6 @@ import EventScreen from "./Screens/EventScreen";
 
 import HomeScreen from "./Screens/HomeScreen";
 import SignInScreen from "./Screens/SignInScreen";
-import GuestListScreen from "./Screens/GuestListScreen";
 
 export default class App extends React.Component {
   constructor(props) {
@@ -18,7 +17,6 @@ export default class App extends React.Component {
         <Router>
           <Route exact path="/" component={HomeScreen} />
           <Route path="/event" component={EventScreen} />
-          <Route path="/guestlist" component={GuestListScreen} />
           <Route path="/signin" component={SignInScreen} />
         </Router>
       </div>
