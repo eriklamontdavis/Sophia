@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import EventScreen from "./Screens/EventScreen";
-import Ya from "./Screens/EventScreenTwo.js";
+
 import HomeScreen from "./Screens/HomeScreen";
 import SignInScreen from "./Screens/SignInScreen";
 import GuestListScreen from "./Screens/GuestListScreen";
@@ -19,7 +19,7 @@ export default class App extends React.Component {
           <Route exact path="/" component={HomeScreen} />
           <Route path="/event" component={EventScreen} />
           <Route path="/guestlist" component={GuestListScreen} />
-          <Route path="/ya" component={Ya} />
+
           <Route path="/signin" component={SignInScreen} />
         </Router>
       </div>
