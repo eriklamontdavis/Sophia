@@ -5,8 +5,6 @@ import App from "./App";
 import { Provider } from "./Components/Context";
 
 ReactDOM.render(
-  <Provider>
-    <App />
-  </Provider>,
+  <App />,
   document.getElementById("root")
 );

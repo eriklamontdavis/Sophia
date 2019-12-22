@@ -10,20 +10,27 @@ import Timer from "../Components/Timer";
 import Header from "../Components/Header";
 import Details from "../Components/Details";
 import withSplashScreen from "../Components/Common/withSplashScreen";
+import { Provider } from "../Components/Context";
 
 class EventScreen extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {eventID: this.props['match']['params']['eventID']}
+  }
   render() {
     return (
-      <React.Fragment>
-        <Header />
-        <MainCard />
-        <TextInfoBlock />
-        <GuestList />
-        <Details />
-        <Timer />
-        <CtaSection />
-        <EventHost />
-      </React.Fragment>
+      <Provider eventID = {this.state.eventID}>
+        <React.Fragment>
+          <Header />
+          <MainCard />
+          <TextInfoBlock />
+          <GuestList />
+          <Details />
+          <Timer />
+          <CtaSection />
+          <EventHost />
+        </React.Fragment>
+      </Provider>
     );
   }
 }

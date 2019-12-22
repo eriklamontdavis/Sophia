@@ -7,6 +7,7 @@ export class Provider extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      eventID: this.props.eventID,
       data: {
         title: null,
         participants: null,
@@ -20,10 +21,11 @@ export class Provider extends Component {
         guests: []
       }
     };
+    console.log(this.props)
   }
 
   componentDidMount() {
-    let eventRef = db.collection("events").doc("Y0Lh87vUcU4sP4hhvxyP");
+    let eventRef = db.collection("events").doc(this.state.eventID);
     let getDoc = eventRef
       .get()
       .then(doc => {
