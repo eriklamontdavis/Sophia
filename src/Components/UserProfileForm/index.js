@@ -4,12 +4,15 @@ import "./UserForm.scss";
 import "../Common/Buttons.scss";
 import { Link } from "react-router-dom";
 
-const UserProfile = () => {
+const UserProfileForm = () => {
   const [User, setUser] = useState({
     name: "",
     phone: "",
     payed: false
   });
+
+  // This is currently adding users to the wrong FireBase collection and array
+  // Add submits to the correct event guest array
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -59,4 +62,4 @@ const UserProfile = () => {
   );
 };
 
-export default UserProfile;
+export default UserProfileForm;

@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import UserProfile from "../Components/UserProfile";
+import UserProfileForm from "../Components/UserProfileForm";
 
 export default function SignInScreen() {
   return (
     <div className="body">
-      <UserProfile />
+      <UserProfileForm />
     </div>
   );
 }
