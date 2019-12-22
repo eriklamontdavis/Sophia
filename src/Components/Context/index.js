@@ -16,7 +16,8 @@ export class Provider extends Component {
         deadline: null,
         organizer: null,
         location: null,
-        time: null
+        time: null,
+        guests: []
       }
     };
   }
@@ -42,7 +43,12 @@ export class Provider extends Component {
 
   render() {
     return (
-      <EventContext.Provider value={{ data: this.state.data }}>
+      <EventContext.Provider
+        value={{
+          data: this.state.data,
+          guests: this.state.data.guests
+        }}
+      >
         {this.props.children}
       </EventContext.Provider>
     );

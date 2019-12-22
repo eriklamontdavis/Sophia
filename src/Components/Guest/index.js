@@ -1,26 +1,30 @@
 import React, { PureComponent } from "react";
-import PropTypes from "prop-types";
-import "./Guest.scss";
+import "../Guest/styling.scss";
 
 import { Consumer } from "../Context";
 
-class Guest extends PureComponent {
+class Guest extends React.Component {
   render() {
-    const { name, image, id } = this.props;
+    const { index } = this.props;
 
     return (
-      <div className="personCardWrapper">
+      <React.Fragment>
         <Consumer>
-          {({ players }) => (
-            <div className="guest">
-              <div className="userAvatarWrapper">
-                <img src={image} className="personAvatarImage" />
+          {({ guests }) => (
+            <React.Fragment>
+              <div className="personCardDiv">
+                <div className="userAvatarWrapper">
+                  <img
+                    src={guests[index].image}
+                    className="personAvatarImage"
+                  />
+                </div>
+                <h4>{guests[index].name}</h4>
               </div>
-              <p>{name}</p>
-            </div>
+            </React.Fragment>
           )}
         </Consumer>
-      </div>
+      </React.Fragment>
     );
   }
 }
