@@ -21,9 +21,8 @@ export class Provider extends Component {
       }
     };
   }
-
   componentDidMount() {
-    let eventRef = db.collection("events").doc("Y0Lh87vUcU4sP4hhvxyP");
+    let eventRef = db.collection("events").doc("uYStfIwZMm3typUrVy1G");
     let getDoc = eventRef
       .get()
       .then(doc => {
