@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { db } from "../../firebase";
+import * as firebase from "firebase";
 import "./UserForm.scss";
 import "../Common/Buttons.scss";
 import { Link } from "react-router-dom";
@@ -11,12 +12,12 @@ const UserProfileForm = () => {
     payed: false
   });
 
-  // This is currently adding users to the wrong FireBase collection and array
-  // Add submits to the correct event guest array
-
   const handleSubmit = e => {
     e.preventDefault();
-    db.collection("users").add(User);
+
+    db.doc("events/uYStfIwZMm3typUrVy1G").update({
+      guests: firebase.firestore.FieldValue.arrayUnion(User)
+    });
     setUser({
       name: "",
       phone: "",
@@ -43,7 +44,6 @@ const UserProfileForm = () => {
           required
         />
         <label htmlFor="name">Phone number</label>
-
         <input
           type="text"
           id="phone"
@@ -53,10 +53,9 @@ const UserProfileForm = () => {
           placeholder="Phone number"
           required
         />
-
-        <Link className="secondaryButton" type="submit" to="/event">
+        <button className="secondaryButton" type="submit">
           Done
-        </Link>
+        </button>
       </form>
     </div>
   );
