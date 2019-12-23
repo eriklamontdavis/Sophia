@@ -24,7 +24,7 @@ class GuestCountOverview extends Component {
                   <h4>
                     <CountUp
                       start={0}
-                      end={data.participants}
+                      end={data.guests.length}
                       duration={4}
                       separator=" "
                       decimals={0}

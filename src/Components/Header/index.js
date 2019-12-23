@@ -10,7 +10,7 @@ const Header = ({ min, deadline }) => {
       {({ data }) => (
         <React.Fragment>
           <div className="header">
-            <h1>{data.min}</h1>
+            <h1>{data.min-data.guests.length}</h1>
             <p>
               more people needed in <span>{data.deadline}</span> for this
               gathering to happen.

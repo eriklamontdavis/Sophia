@@ -22,7 +22,7 @@ class MainCard extends React.Component {
             <div className="mainCard">
               <Header />
               <GuestCount />
-              <ProgressBar percentage={(data.participants / data.min) * 100} />
+              <ProgressBar percentage={(data.guests.length / data.min) * 100} />
               <div className="buttonContainer">
                 <WouldGoButton text="I would go" eventID = {this.state.eventID}/>
               </div>

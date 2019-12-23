@@ -1,15 +1,17 @@
 import React from "react";
 import "./TextInfoBlock.scss";
+import { Consumer } from "../Context";
 
 const TextInfoBlock = props => (
-  <div className="textInfoWrapper">
-    <p>
-      Contrary to popular belief, Lorem Ipsum is not simply random text. It has
-      roots in a piece of classical Latin literature from 45 BC, making it over
-      2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney
-      College in Virginia, looked up one of the more obscure Latin words.
-    </p>
-  </div>
+  <Consumer>
+        {({ data }) => (
+          <div className="textInfoWrapper">
+          <p>
+            {data.description}
+          </p>
+        </div>
+        )}
+      </Consumer>
 );
 
 export default TextInfoBlock;
