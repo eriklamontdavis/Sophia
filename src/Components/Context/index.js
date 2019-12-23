@@ -21,7 +21,6 @@ export class Provider extends Component {
         guests: []
       }
     };
-    console.log(this.props);
   }
   componentDidMount() {
     let eventRef = db.collection("events").doc(this.state.eventID);

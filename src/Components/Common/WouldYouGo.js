@@ -2,9 +2,12 @@ import React from "react";
 import "./WouldYouGo.scss";
 import "./Buttons.scss";
 import { Link } from "react-router-dom";
+import { string } from "prop-types";
 
-const WouldYouGoModal = ({ handleClose, show, children }) => {
+const WouldYouGoModal = ({ handleClose, show, eventID, children }) => {
   const showHideClassName = show ? "modal display-block" : "modal display-none";
+  const redirect = eventID+"/signin"
+  console.log(redirect)
 
   return (
     <div className={showHideClassName}>
@@ -16,7 +19,7 @@ const WouldYouGoModal = ({ handleClose, show, children }) => {
               You commit to go if this happening reaches it minimum guest limit.
             </p>
           </div>
-          <Link to="/signin">
+          <Link to={{pathname: redirect}}>
             <button className="modalButton">I'm committed</button>
           </Link>
           <button onClick={handleClose} className="secondaryButtonAlt">

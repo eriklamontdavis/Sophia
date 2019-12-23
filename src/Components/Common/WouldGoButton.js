@@ -5,7 +5,13 @@ import "./Buttons.scss";
 import { Link } from "react-router-dom";
 
 class WouldGoButton extends React.Component {
-  state = { show: false };
+  constructor(props){
+    super(props);
+    this.state = {
+      show: false,
+      eventID: this.props.eventID
+    }
+  }
 
   showModal = () => {
     this.setState({ show: true });
@@ -18,7 +24,7 @@ class WouldGoButton extends React.Component {
   render() {
     return (
       <main>
-        <WouldYouGoModal show={this.state.show} handleClose={this.hideModal} />
+        <WouldYouGoModal show={this.state.show} handleClose={this.hideModal} eventID = {this.state.eventID} />
         <button className="primaryButton" onClick={this.showModal}>
           <div>I would go</div>
         </button>

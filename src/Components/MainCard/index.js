@@ -9,6 +9,10 @@ import ProgressBar from "./Progress";
 import { Consumer } from "../Context";
 
 class MainCard extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {eventID: this.props.eventID}
+  }
   render() {
     const { participants, min } = this.props;
     return (
@@ -20,7 +24,7 @@ class MainCard extends React.Component {
               <GuestCount />
               <ProgressBar percentage={(data.participants / data.min) * 100} />
               <div className="buttonContainer">
-                <WouldGoButton text="I would go" />
+                <WouldGoButton text="I would go" eventID = {this.state.eventID}/>
               </div>
             </div>
           </div>
