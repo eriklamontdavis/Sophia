@@ -5,17 +5,18 @@ import "./UserForm.scss";
 import "../Common/Buttons.scss";
 import { Link } from "react-router-dom";
 
-const UserProfileForm = () => {
+// Vi vill nu kunna ta in props i UserProfile, för att kunna få eventID
+
+const UserProfileForm = (eventID) => {
   const [User, setUser] = useState({
     name: "",
     phone: "",
     payed: false
   });
-
   const handleSubmit = e => {
     e.preventDefault();
 
-    db.doc("events/uYStfIwZMm3typUrVy1G").update({
+    db.doc("events/".concat(eventID.eventID)).update({
       guests: firebase.firestore.FieldValue.arrayUnion(User)
     });
     setUser({

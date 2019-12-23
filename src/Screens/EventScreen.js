@@ -22,7 +22,7 @@ class EventScreen extends React.Component {
       <Provider eventID = {this.state.eventID}>
         <React.Fragment>
           <Header />
-          <MainCard />
+          <MainCard eventID = {this.state.evetID}/>
           <TextInfoBlock />
           <GuestList />
           <Details />
