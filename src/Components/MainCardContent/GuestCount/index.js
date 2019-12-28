@@ -62,11 +62,13 @@ class GuestCountOverview extends Component {
                 .going h4 {
                   font-weight: ${global.bold};
                   font-size: 1.5em;
+                  color: black;
                   margin: 0px;
                 }
                 .going p {
                   font-size: 1.2em;
                   font-weight: 400;
+                  color: black;
 
                   margin: 0px;
                 }

@@ -30,7 +30,7 @@ class Header extends React.Component {
               >
                 <button>
                   {this.state.copied ? (
-                    <span style={{ color: "green" }}>Copied.</span>
+                    <span style={{ color: "white" }}>Copied.</span>
                   ) : (
                     "Tap to copy link"
                   )}
