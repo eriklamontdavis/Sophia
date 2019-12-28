@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import EventScreen from "./Screens/EventScreen";
-
+import EventScreen from "./Screens/EventScreen/index.js";
 import HomeScreen from "./Screens/HomeScreen";
 import SignInScreen from "./Screens/SignInScreen";
 
