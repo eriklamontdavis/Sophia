@@ -2,10 +2,10 @@
 @import "../Common/Buttons.scss";
 
 .header {
-  padding: 2.5em 1em 6.5em;
+  padding: 2.5em 1em 8em;
   text-align: center;
   color: white;
-  background-color: black;
+  background-color: $primary-color;
 
   margin: auto;
   margin-bottom: 24px;
@@ -28,7 +28,7 @@
     font-size: 1.25em;
     line-height: 19px;
     margin: 0px;
-    margin-bottom: 24px;
+    margin-bottom: 1.5em;
     line-height: 134%;
   }
   span {
