@@ -1,0 +1,32 @@
+@import "../Common/GlobalStyling.scss";
+
+.guest-row {
+  display: flex;
+  flex-direction: column;
+  border-radius: 6px;
+  overflow: none;
+
+  padding: 8px 16px 16px 16px;
+  overflow-y: scroll; /* has to be scroll, not auto */
+  -webkit-overflow-scrolling: touch;
+}
+
+.guest-row::-webkit-scrollbar {
+  display: none;
+}
+
+.guest-section {
+  display: flex;
+  flex-direction: column;
+  padding: 24px 0px 8px 0px;
+
+  @extend %on-load-animation;
+  animation: onLoad 1.4s ease-in-out;
+}
+
+.guest-section h6 {
+  font-size: 1em;
+  font-weight: 300;
+  margin-bottom: 4px;
+  margin-top: 0px;
+}

@@ -1,5 +1,5 @@
 import React, { PureComponent } from "react";
-import "../Guest/styling.scss";
+import "./GuestStyling.scss";
 
 import { Consumer } from "../Context";
 
@@ -12,15 +12,9 @@ class Guest extends React.Component {
         <Consumer>
           {({ guests }) => (
             <React.Fragment>
-              <div className="personCardDiv">
-                <div className="userAvatarWrapper">
-                  <img
-                    src={guests[index].image}
-                    className="personAvatarImage"
-                  />
-                </div>
+              <li className="guest-card">
                 <h4>{guests[index].name}</h4>
-              </div>
+              </li>
             </React.Fragment>
           )}
         </Consumer>

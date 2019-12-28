@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 // Vi vill nu kunna ta in props i UserProfile, för att kunna få eventID
 
-const UserProfileForm = (eventID) => {
+const UserProfileForm = eventID => {
   const [User, setUser] = useState({
     name: "",
     phone: "",
@@ -34,17 +34,15 @@ const UserProfileForm = (eventID) => {
     <div className="form-container">
       <h6>New User</h6>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="name">name</label>
         <input
           type="text"
           id="name"
           name="name"
           value={User.name}
           onChange={handleChange}
-          placeholder="e.g. Charlie and the Chocolate Factory"
+          placeholder="Full name"
           required
         />
-        <label htmlFor="name">Phone number</label>
         <input
           type="text"
           id="phone"
@@ -54,7 +52,7 @@ const UserProfileForm = (eventID) => {
           placeholder="Phone number"
           required
         />
-        <button className="secondaryButton" type="submit">
+        <button className="submit-button" type="submit">
           Done
         </button>
       </form>

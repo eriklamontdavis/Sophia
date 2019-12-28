@@ -1,6 +1,6 @@
-$primary-color: rgb(14, 14, 14);
+$primary-color: #13151a;
 $secondary-color: #fb0b4b;
-$bg-color: black;
+$bg-color: #13151a;
 $card-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04);
 $standard-radius: 8px;
 $standard-padding: 16px;
@@ -25,6 +25,10 @@ $bold-text: 700;
       margin-top: 0px;
     }
   }
+}
+
+body {
+  background-color: #fcfbf8;
 }
 
 .container {
